@@ -29,7 +29,37 @@ export const portfolioData = {
       { label: "Production Projects", value: "2", suffix: " Shipped" },
       { label: "MCA CGPA", value: "9.00", suffix: " / 10" },
       { label: "BCA CGPA", value: "8.61", suffix: " / 10" }
-    ]
+    ],
+    aboutDetails: {
+      pillars: [
+        {
+          title: "Clean Architecture & Modularity",
+          desc: "Strict separation of concerns, RESTful MVC structure, and reusable React component paradigms for high maintainability."
+        },
+        {
+          title: "Performance & Responsive Polish",
+          desc: "Sub-second load times, 60fps micro-animations, mobile-first layouts, and accessible UI designed for Gen-Z and enterprise appeal."
+        },
+        {
+          title: "AI & Modern Systems Vision",
+          desc: "Specializing in AI/ML through MCA to synthesize modern full-stack web engineering with intelligent algorithmic capabilities."
+        },
+        {
+          title: "Production & Team Experience",
+          desc: "Hands-on experience shipping features in agile sprints, participating in code reviews, and managing Git/GitHub team workflows."
+        }
+      ],
+      quickFacts: [
+        { label: "Target Role", val: "MERN Stack Developer / Full Stack Engineer" },
+        { label: "Availability", val: "Immediate Joiner (0 Days Notice)" },
+        { label: "Work Preference", val: "Open to Relocate / Remote / Hybrid" },
+        { label: "Current Education", val: "MCA in AI/ML — Amity Online (9.00 CGPA)" },
+        { label: "Undergrad Degree", val: "BCA — Amity University (8.61 CGPA)" },
+        { label: "Core Stack", val: "React 19, JavaScript ES6+, Node.js, Express, MongoDB" },
+        { label: "Databases & Auth", val: "MongoDB (Mongoose), SQL, JWT, Passport.js" },
+        { label: "Experience", val: "2 Internships (CodeAlpha, Craft Lab)" }
+      ]
+    }
   },
 
   skills: {
@@ -77,8 +107,8 @@ export const portfolioData = {
         "Designed reusable, responsive React components for catalog showcase, shopping cart state management, and checkout flows.",
         "Implemented structured Mongoose schemas with indexed querying for optimized database performance."
       ],
-      demoUrl: "https://github.com",
-      githubUrl: "https://github.com",
+      demoUrl: "https://github.com/vanshkesarwani/portfolio",
+      githubUrl: "https://github.com/vanshkesarwani/portfolio",
       gradient: "from-purple to-cyan"
     },
     {
@@ -95,8 +125,8 @@ export const portfolioData = {
         "Integrated Cloudinary cloud storage API for secure image upload, transformation, and fast CDN delivery.",
         "Integrated Mapbox GL JS for interactive property geo-location maps with custom coordinate markers."
       ],
-      demoUrl: "https://github.com",
-      githubUrl: "https://github.com",
+      demoUrl: "https://github.com/vanshkesarwani",
+      githubUrl: "https://github.com/vanshkesarwani",
       gradient: "from-cyan to-emerald"
     }
   ],

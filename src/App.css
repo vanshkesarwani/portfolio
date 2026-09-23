@@ -786,6 +786,113 @@
   }
 }
 
+.about-details-wrap {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .about-details-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-pillars-card,
+.about-facts-card {
+  padding: clamp(20px, 3.5vw, 30px);
+}
+
+.about-subcard-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-subcard-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pillar-item {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.25s ease;
+}
+
+.pillar-item:hover {
+  background: rgba(99, 102, 241, 0.06);
+  border-color: rgba(99, 102, 241, 0.25);
+  transform: translateX(4px);
+}
+
+.pillar-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #c7d2fe;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pillar-desc {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.quick-facts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 13.5px;
+  gap: 12px;
+}
+
+@media (max-width: 500px) {
+  .fact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+.fact-label {
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.fact-val {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: right;
+}
+
 /* --------------------------------------------------------------------------
    Skills Styles
    -------------------------------------------------------------------------- */

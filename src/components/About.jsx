@@ -92,6 +92,44 @@ export default function About() {
             </div>
           ))}
         </div>
+
+        {/* Deep Dive: Engineering Pillars & Quick Facts */}
+        <div className="about-details-wrap">
+          {/* Engineering Pillars */}
+          <div className="about-pillars-card glass-card">
+            <div className="about-subcard-header">
+              <Code size={18} className="text-indigo" />
+              <h3 className="about-subcard-title">Core Engineering Pillars</h3>
+            </div>
+            <div className="pillars-list">
+              {portfolioData.personal.aboutDetails.pillars.map((pillar, idx) => (
+                <div key={idx} className="pillar-item">
+                  <div className="pillar-title">
+                    <CheckCircle2 size={15} className="text-emerald flex-shrink-0" />
+                    <span>{pillar.title}</span>
+                  </div>
+                  <p className="pillar-desc">{pillar.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Facts & Profile Snapshot */}
+          <div className="about-facts-card glass-card">
+            <div className="about-subcard-header">
+              <Sparkles size={18} className="text-cyan" />
+              <h3 className="about-subcard-title">Profile Snapshot</h3>
+            </div>
+            <div className="quick-facts-grid">
+              {portfolioData.personal.aboutDetails.quickFacts.map((fact, idx) => (
+                <div key={idx} className="fact-row">
+                  <span className="fact-label font-mono">{fact.label}</span>
+                  <span className="fact-val">{fact.val}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
