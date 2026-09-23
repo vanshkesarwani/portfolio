@@ -68,6 +68,10 @@ export default function ResumeModal({ isOpen, onClose }) {
               <span>•</span>
               <span><Mail size={12} className="inline-icon" /> {portfolioData.personal.contact.email}</span>
               <span>•</span>
+              <a href={portfolioData.personal.contact.github} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>
+                github.com/vanshkesarwani
+              </a>
+              <span>•</span>
               <a href={portfolioData.personal.contact.linkedin} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>
                 linkedin.com/in/vansh-kumar-kesarwani
               </a>

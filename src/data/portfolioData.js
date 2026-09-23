@@ -19,7 +19,7 @@ export const portfolioData = {
       email: "vanshkesarwanivk02@gmail.com",
       phone: "+91 8756433837",
       phoneRaw: "+918756433837",
-      github: "https://github.com",
+      github: "https://github.com/vanshkesarwani",
       linkedin: "https://www.linkedin.com/in/vansh-kumar-kesarwani",
       portfolio: "https://vanshkesarwani.dev"
     },
