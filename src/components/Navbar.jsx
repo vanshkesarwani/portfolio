@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Sparkles, FileText, Menu, X, ArrowUpRight } from "lucide-react";
+import { Sparkles, FileText, Menu, X, ArrowUpRight, Rocket } from "lucide-react";
 import confetti from "canvas-confetti";
 import { portfolioData } from "../data/portfolioData";
 
@@ -47,7 +47,7 @@ export default function Navbar({ onOpenResume }) {
   const navLinks = [
     { label: "About", href: "#about", id: "about" },
     { label: "Skills", href: "#skills", id: "skills" },
-    { label: "Projects", href: "#projects", id: "projects" },
+    { label: "Projects", href: "#projects", id: "projects", badge: "Live" },
     { label: "Experience", href: "#experience", id: "experience" },
     { label: "Education", href: "#education", id: "education" },
     { label: "Contact", href: "#contact", id: "contact" }
@@ -72,7 +72,13 @@ export default function Navbar({ onOpenResume }) {
               id={`nav-link-${link.id}`}
               className={`nav-link ${activeSection === link.id ? "active" : ""}`}
             >
-              {link.label}
+              <span>{link.label}</span>
+              {link.badge && (
+                <span className="nav-badge-live font-mono">
+                  <span className="live-dot-pulse"></span>
+                  <span>{link.badge}</span>
+                </span>
+              )}
               {activeSection === link.id && <span className="active-indicator" />}
             </a>
           ))}
@@ -90,7 +96,7 @@ export default function Navbar({ onOpenResume }) {
             className="sparkle-btn"
             id="nav-sparkle-btn"
             onClick={triggerSparkleConfetti}
-            title="Drop some sparkles!"
+            title="Celebrate!"
             aria-label="Celebrate"
           >
             <Sparkles size={16} />
@@ -139,7 +145,13 @@ export default function Navbar({ onOpenResume }) {
                 className="mobile-nav-link"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {link.label}
+                <span>{link.label}</span>
+                {link.badge && (
+                  <span className="nav-badge-live font-mono">
+                    <span className="live-dot-pulse"></span>
+                    <span>{link.badge}</span>
+                  </span>
+                )}
               </a>
             ))}
           </nav>
@@ -153,7 +165,7 @@ export default function Navbar({ onOpenResume }) {
               }}
             >
               <FileText size={16} />
-              <span>View Resume</span>
+              <span>View Resume (PDF)</span>
             </button>
             <a
               href="#contact"

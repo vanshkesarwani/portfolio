@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  Copy, 
-  Check, 
-  FileText, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Copy,
+  Check,
+  FileText,
   Sparkles,
   ArrowUpRight
 } from "lucide-react";
@@ -258,7 +258,7 @@ export default function Contact({ onCopy, onOpenResume }) {
                     className="btn btn-primary btn-full"
                     id="contact-submit-btn"
                   >
-                    <span>Transmit Message</span>
+                    <span>Send</span>
                     <Send size={16} />
                   </button>
                 </form>

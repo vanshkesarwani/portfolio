@@ -90,13 +90,14 @@ export default function Skills() {
             {[
               "MERN Stack Integration",
               "RESTful MVC Architecture",
-              "JWT Authentication & Session Security",
-              "CRUD Product Pipelines",
-              "Dynamic React State & Hooks",
+              "JWT & Passport.js Authentication",
+              "CRUD Operations & REST APIs",
+              "Role-Based Access Control (RBAC)",
+              "Cloudinary CDN & Mapbox Geocoding",
               "Schema Optimization with Mongoose",
-              "Mobile-First Responsive Layouts",
-              "Git & GitHub Team Workflows",
-              "SDLC & Agile Development"
+              "Responsive Web Design & Tailwind CSS",
+              "Git/GitHub Team Workflows",
+              "API Testing & Debugging"
             ].map((concept, i) => (
               <div key={i} className="concept-pill font-mono">
                 <CheckCircle size={13} className="text-emerald" />

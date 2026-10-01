@@ -2,12 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Vansh Kumar Kesarwani — MERN Stack & Full Stack Developer</title>
     <meta name="description" content="Portfolio of Vansh Kumar Kesarwani: MERN Stack Developer, Full Stack Engineer & MCA (AI/ML) student. Immediate joiner open to relocate." />
     <meta name="keywords" content="Vansh Kumar Kesarwani, MERN Stack, React Developer, Node.js, Express, MongoDB, Portfolio, Web Developer" />
     <meta name="author" content="Vansh Kumar Kesarwani" />
     <meta name="theme-color" content="#08090d" />
+
+    <!-- Always load at home/top on refresh -->
+    <script>
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

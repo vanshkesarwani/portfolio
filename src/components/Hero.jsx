@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { 
-  ArrowRight, 
-  Copy, 
-  Check, 
-  Terminal as TerminalIcon, 
-  Sparkles, 
-  MapPin, 
-  Briefcase, 
-  FileText, 
-  Code2, 
+import {
+  ArrowRight,
+  Copy,
+  Check,
+  Terminal as TerminalIcon,
+  Sparkles,
+  MapPin,
+  Briefcase,
+  FileText,
+  Code2,
   ChevronRight,
   Database,
-  Cpu
+  Cpu,
+  Rocket,
+  ArrowUpRight
 } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 
@@ -20,8 +22,8 @@ export default function Hero({ onCopy, onOpenResume }) {
   const [terminalHistory, setTerminalHistory] = useState([
     { type: "cmd", text: "vansh --status" },
     { type: "out", text: "✓ Available immediately for MERN Stack & Full Stack Roles" },
-    { type: "cmd", text: "vansh --stack" },
-    { type: "out", text: "React.js • Node.js • Express.js • MongoDB • JWT • REST API" }
+    { type: "cmd", text: "vansh --live" },
+    { type: "out", text: "🚀 Velura (E-Commerce) & Wanderlust (Rental) deployed live on Vercel" }
   ]);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
@@ -42,12 +44,14 @@ export default function Hero({ onCopy, onOpenResume }) {
 
   const handleRunCommand = (cmd) => {
     let output = "";
-    if (cmd === "skills") {
-      output = "Frontend: React.js, HTML5, CSS3, JS ES6+ | Backend: Node.js, Express.js, JWT, REST APIs | DB: MongoDB, SQL";
+    if (cmd === "live") {
+      output = "🚀 Velura: https://e-commerce-five-xi-63.vercel.app/ | 🌍 Wanderlust: https://wanderlust-six-vert.vercel.app/";
+    } else if (cmd === "skills") {
+      output = "Frontend: React.js, Vite, Tailwind CSS, HTML5, CSS3, JS ES6+ | Backend: Node.js, Express.js, REST API, JWT, Passport.js, CRUD | DB: MongoDB, SQL";
     } else if (cmd === "projects") {
-      output = "1. Footwear E-Commerce (MERN + JWT + Mongoose) | 2. Wanderlust (Node.js + Mapbox + Cloudinary)";
+      output = "1. Velura (Luxury E-Commerce MERN) | 2. Wanderlust (Vacation Rental Platform + Mapbox)";
     } else if (cmd === "education") {
-      output = "MCA AI/ML @ Amity Online (CGPA 9.00) • BCA @ Amity Lucknow (CGPA 8.61)";
+      output = "MCA AI/ML @ Amity Online (CGPA: 8.82) • BCA @ Amity Lucknow (CGPA: 8.61)";
     } else if (cmd === "clear") {
       setTerminalHistory([]);
       return;
@@ -95,28 +99,19 @@ export default function Hero({ onCopy, onOpenResume }) {
 
           {/* Pitch */}
           <p className="hero-description">
-            BCA Graduate & MCA (AI/ML) student architecting production-grade MERN web applications. 
-            Obsessed with fluid micro-interactions, clean MVC architectures, and scalable full-stack APIs.
+            BCA Graduate & MCA (AI/ML) student architecting production-grade MERN web applications.
+            Hands-on experience through full-stack internship and shipped projects, focusing on clean MVC patterns, robust REST APIs, and fluid UI.
           </p>
 
           {/* Quick CTA Buttons */}
           <div className="hero-cta-group">
             <a href="#projects" className="btn btn-primary hero-btn-main" id="hero-cta-projects">
-              <span>View Projects</span>
+              <Rocket size={17} />
+              <span>Explore Project </span>
               <ArrowRight size={17} />
             </a>
 
             <div className="hero-btn-subgroup">
-              <button
-                type="button"
-                className="btn btn-secondary hero-btn-sub"
-                id="hero-copy-email-btn"
-                onClick={handleCopyEmail}
-              >
-                {copiedEmail ? <Check size={16} className="text-emerald" /> : <Copy size={16} />}
-                <span>{copiedEmail ? "Copied!" : "Copy Email"}</span>
-              </button>
-
               <button
                 type="button"
                 className="btn btn-secondary hero-btn-sub"
@@ -125,6 +120,16 @@ export default function Hero({ onCopy, onOpenResume }) {
               >
                 <FileText size={16} />
                 <span>Resume PDF</span>
+              </button>
+
+              <button
+                type="button"
+                className="btn btn-secondary hero-btn-sub"
+                id="hero-copy-email-btn"
+                onClick={handleCopyEmail}
+              >
+                {copiedEmail ? <Check size={16} className="text-emerald" /> : <Copy size={16} />}
+                <span>{copiedEmail ? "Copied!" : "Copy Email"}</span>
               </button>
             </div>
           </div>
@@ -137,7 +142,7 @@ export default function Hero({ onCopy, onOpenResume }) {
             </div>
             <div className="meta-item">
               <Briefcase size={14} className="meta-icon" />
-              <span>Target: Full Stack / MERN Roles</span>
+              <span>Target: MERN / Full Stack Developer</span>
             </div>
           </div>
         </div>
@@ -162,33 +167,42 @@ export default function Hero({ onCopy, onOpenResume }) {
             {/* Terminal Interactive Quick Commands */}
             <div className="terminal-commands-bar">
               <span className="cmd-label">Quick run:</span>
-              <button 
-                type="button" 
-                className="cmd-chip" 
+              <button
+                type="button"
+                className="cmd-chip chip-highlight"
+                onClick={() => handleRunCommand("live")}
+                id="term-cmd-live"
+                title="View live deployed URLs"
+              >
+                --live
+              </button>
+              <button
+                type="button"
+                className="cmd-chip"
                 onClick={() => handleRunCommand("skills")}
                 id="term-cmd-skills"
               >
                 --skills
               </button>
-              <button 
-                type="button" 
-                className="cmd-chip" 
+              <button
+                type="button"
+                className="cmd-chip"
                 onClick={() => handleRunCommand("projects")}
                 id="term-cmd-projects"
               >
                 --projects
               </button>
-              <button 
-                type="button" 
-                className="cmd-chip" 
+              <button
+                type="button"
+                className="cmd-chip"
                 onClick={() => handleRunCommand("education")}
                 id="term-cmd-edu"
               >
                 --education
               </button>
-              <button 
-                type="button" 
-                className="cmd-chip chip-clear" 
+              <button
+                type="button"
+                className="cmd-chip chip-clear"
                 onClick={() => handleRunCommand("clear")}
                 id="term-cmd-clear"
               >
@@ -220,11 +234,11 @@ export default function Hero({ onCopy, onOpenResume }) {
             <div className="terminal-footer">
               <div className="term-stat">
                 <Cpu size={13} />
-                <span>React 19 + Vite</span>
+                <span>React.js + Vite + Tailwind</span>
               </div>
               <div className="term-stat">
                 <Database size={13} />
-                <span>MongoDB & Express Ready</span>
+                <span>Node.js, Express & MongoDB</span>
               </div>
             </div>
           </div>

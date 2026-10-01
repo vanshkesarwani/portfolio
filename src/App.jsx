@@ -9,12 +9,41 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ResumeModal from "./components/ResumeModal";
-import { CheckCircle, Info } from "lucide-react";
+import { CheckCircle, Info, Rocket, FileText, Send, Sparkles } from "lucide-react";
 import "./App.css";
 
 function App() {
   const [resumeOpen, setResumeOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
+  const [showFloatingHud, setShowFloatingHud] = useState(false);
+
+  // Guarantee page loads at home / top on refresh
+  useEffect(() => {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+
+    const handleBeforeUnload = () => {
+      window.scrollTo(0, 0);
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, []);
+
+  // Floating HUD visibility on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowFloatingHud(window.scrollY > 350);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const showToast = (msg) => {
     setToastMessage(msg);
@@ -36,7 +65,7 @@ function App() {
         />
         <About />
         <Skills />
-        <Projects />
+        <Projects onCopy={showToast} />
         <Experience />
         <Education />
         <Contact 
@@ -53,6 +82,29 @@ function App() {
         isOpen={resumeOpen} 
         onClose={() => setResumeOpen(false)} 
       />
+
+      {/* Floating Action HUD on scroll */}
+      {showFloatingHud && (
+        <div className="floating-hud-dock glass-card">
+          <a href="#projects" className="hud-pill-btn" title="Jump to Live Deployed Projects">
+            <Rocket size={14} className="text-cyan animate-bounce" />
+            <span>Live</span>
+          </a>
+          <button 
+            type="button" 
+            className="hud-pill-btn" 
+            onClick={() => setResumeOpen(true)}
+            title="Open Verified Resume PDF"
+          >
+            <FileText size={14} className="text-indigo" />
+            <span>Resume</span>
+          </button>
+          <a href="#contact" className="hud-pill-btn btn-highlight" title="Contact Vansh">
+            <Send size={14} />
+            <span>Contact</span>
+          </a>
+        </div>
+      )}
 
       {/* Toast Notification Container */}
       {toastMessage && (

@@ -1,17 +1,15 @@
 import React from "react";
 import { 
   X, 
-  Download, 
   Printer, 
+  Download, 
+  ExternalLink,
   Mail, 
   Phone, 
-  MapPin, 
-  CheckCircle2, 
-  Briefcase, 
-  GraduationCap, 
-  Award,
-  Sparkles
+  MapPin,
+  FileCheck
 } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 import { portfolioData } from "../data/portfolioData";
 
 export default function ResumeModal({ isOpen, onClose }) {
@@ -35,15 +33,37 @@ export default function ResumeModal({ isOpen, onClose }) {
           </div>
 
           <div className="resume-controls-right">
+            <a
+              href={portfolioData.personal.contact.resumePdf || "/resume.pdf"}
+              download="Vansh_Kumar_Kesarwani_Resume.pdf"
+              className="btn btn-primary btn-sm"
+              title="Download original verified PDF file"
+            >
+              <Download size={14} />
+              <span>Download PDF</span>
+            </a>
+
+            <a
+              href={portfolioData.personal.contact.resumePdf || "/resume.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary btn-sm"
+              title="Open raw PDF file in new browser tab"
+            >
+              <ExternalLink size={14} />
+              <span className="hidden-mobile">Open PDF Tab</span>
+            </a>
+
             <button
               type="button"
               className="btn btn-secondary btn-sm"
               onClick={handlePrint}
               title="Print or Save as PDF"
             >
-              <Printer size={15} />
-              <span>Print / Save PDF</span>
+              <Printer size={14} />
+              <span className="hidden-mobile">Print</span>
             </button>
+
             <button
               type="button"
               className="modal-close-btn"
@@ -61,19 +81,21 @@ export default function ResumeModal({ isOpen, onClose }) {
           <div className="resume-header-block">
             <h1 className="resume-name font-heading">{portfolioData.personal.name}</h1>
             <p className="resume-role-line font-mono">
-              MERN Stack Developer · Full Stack Web Developer · React.js · Node.js · MongoDB
+              MERN Stack Developer | React.js | Node.js | Express.js | MongoDB
             </p>
             <div className="resume-contacts-row font-mono">
               <span><Phone size={12} className="inline-icon" /> {portfolioData.personal.contact.phone}</span>
               <span>•</span>
-              <span><Mail size={12} className="inline-icon" /> {portfolioData.personal.contact.email}</span>
-              <span>•</span>
-              <a href={portfolioData.personal.contact.github} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>
-                github.com/vanshkesarwani
+              <a href={`mailto:${portfolioData.personal.contact.email}`} style={{ color: "inherit", textDecoration: "none" }}>
+                <Mail size={12} className="inline-icon" /> {portfolioData.personal.contact.email}
               </a>
               <span>•</span>
               <a href={portfolioData.personal.contact.linkedin} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>
-                linkedin.com/in/vansh-kumar-kesarwani
+                LinkedIn
+              </a>
+              <span>•</span>
+              <a href={portfolioData.personal.contact.github} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>
+                GitHub
               </a>
               <span>•</span>
               <span><MapPin size={12} className="inline-icon" /> {portfolioData.personal.status.location}</span>
@@ -86,7 +108,7 @@ export default function ResumeModal({ isOpen, onClose }) {
           <div className="resume-section">
             <h2 className="resume-section-title font-heading">Professional Summary</h2>
             <p className="resume-summary-text">
-              {portfolioData.personal.bio} Immediate joiner seeking a <strong>MERN Stack Internship</strong> or <strong>Entry-Level Full Stack Developer</strong> role.
+              {portfolioData.personal.bio}
             </p>
           </div>
 
@@ -96,27 +118,23 @@ export default function ResumeModal({ isOpen, onClose }) {
             <div className="resume-skills-table font-mono">
               <div className="skills-row">
                 <span className="skills-category">Frontend:</span>
-                <span className="skills-values">React.js, HTML5, CSS3, JavaScript ES6+</span>
+                <span className="skills-values">React.js, Vite, Tailwind CSS, HTML5, CSS3, JavaScript (ES6+), Responsive Web Design</span>
               </div>
               <div className="skills-row">
                 <span className="skills-category">Backend:</span>
-                <span className="skills-values">Node.js, Express.js, REST API, JWT Auth</span>
+                <span className="skills-values">Node.js, Express.js, REST API, JWT Authentication, Passport.js, CRUD Operations</span>
               </div>
               <div className="skills-row">
                 <span className="skills-category">Database:</span>
-                <span className="skills-values">MongoDB, SQL</span>
+                <span className="skills-values">MongoDB, Mongoose, SQL</span>
               </div>
               <div className="skills-row">
-                <span className="skills-category">Tools:</span>
-                <span className="skills-values">Git, GitHub, Postman, VS Code</span>
+                <span className="skills-category">Tools & Platforms:</span>
+                <span className="skills-values">Git, GitHub, Postman, VS Code, Cloudinary, Mapbox, Vercel</span>
               </div>
               <div className="skills-row">
-                <span className="skills-category">Languages:</span>
+                <span className="skills-category">Programming Languages:</span>
                 <span className="skills-values">JavaScript, Java</span>
-              </div>
-              <div className="skills-row">
-                <span className="skills-category">Concepts:</span>
-                <span className="skills-values">MVC, CRUD, SDLC, Responsive Design</span>
               </div>
             </div>
           </div>
@@ -128,7 +146,7 @@ export default function ResumeModal({ isOpen, onClose }) {
               <div key={idx} className="resume-item">
                 <div className="resume-item-top font-mono">
                   <span className="resume-item-title">
-                    <strong>{exp.role}</strong> · {exp.company} · {exp.location}
+                    <strong>{exp.role}</strong> — {exp.company}, {exp.location}
                   </span>
                   <span className="resume-item-date">{exp.period}</span>
                 </div>
@@ -141,7 +159,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             ))}
           </div>
 
-          {/* Projects */}
+          {/* Projects with Deployed Links */}
           <div className="resume-section">
             <h2 className="resume-section-title font-heading">Projects</h2>
             {portfolioData.projects.map((proj, idx) => (
@@ -149,11 +167,16 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <div className="resume-item-top font-mono">
                   <span className="resume-item-title">
                     <strong>{proj.title}</strong>
+                    {proj.deployedUrl && (
+                      <span className="resume-live-link">
+                        {" "}[<a href={proj.deployedUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#0284c7", fontWeight: 600 }}>Live Deployed Link</a>]
+                      </span>
+                    )}
                   </span>
                   <span className="resume-item-date">{proj.year}</span>
                 </div>
                 <div className="resume-item-stack font-mono">
-                  Stack: {proj.stack.join(" · ")}
+                  Technologies: {proj.stack.join(", ")}
                 </div>
                 <ul className="resume-item-bullets">
                   {proj.highlights.map((h, i) => (
@@ -184,7 +207,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             <ul className="resume-item-bullets font-mono">
               {portfolioData.certifications.map((c, idx) => (
                 <li key={idx}>
-                  <strong>{c.title}</strong> – {c.provider} ({c.badge})
+                  <strong>{c.title}</strong> – {c.provider}
                 </li>
               ))}
             </ul>

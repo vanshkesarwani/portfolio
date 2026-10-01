@@ -16,25 +16,25 @@ export default function About() {
     {
       icon: <Layers className="bento-icon text-indigo" />,
       title: "Full-Stack MERN Craftsmanship",
-      description: "From architecting reusable React component systems to designing robust REST APIs in Express and index-optimized schemas in MongoDB.",
+      description: "From architecting responsive React & Tailwind components to designing robust REST APIs in Express and schemas in MongoDB.",
       tag: "Engineering"
     },
     {
       icon: <Brain className="bento-icon text-cyan" />,
       title: "AI & Machine Learning Focus",
-      description: "Pursuing MCA in AI/ML (Amity Online, 9.00 CGPA) to blend modern full-stack web engineering with intelligent algorithmic capabilities.",
+      description: "Pursuing MCA in AI/ML (Amity University Online, 8.82 CGPA) to blend modern full-stack web engineering with intelligent algorithmic capabilities.",
       tag: "Academic Excellence"
     },
     {
       icon: <Rocket className="bento-icon text-emerald" />,
-      title: "Production & Team Experience",
-      description: "Proven track record across 2 remote internships (CodeAlpha & Craft Lab), conducting code reviews, agile sprints, and Git workflows.",
-      tag: "Industry Ready"
+      title: "Full Stack Internship Experience",
+      description: "Hands-on experience at Vastora Tech Pvt. Ltd. (Noida, Onsite) developing full-stack web apps, implementing REST APIs, CRUD operations, and Git workflows.",
+      tag: "Industry Experience"
     },
     {
       icon: <MapPin className="bento-icon text-amber" />,
       title: "Immediate Joiner · Open to Relocate",
-      description: "Ready to step in and contribute immediately to product goals in high-growth startups, scale-ups, or enterprise engineering teams.",
+      description: "Available immediately to contribute effectively in MERN Stack and Full Stack engineering roles across India.",
       tag: "Availability"
     }
   ];

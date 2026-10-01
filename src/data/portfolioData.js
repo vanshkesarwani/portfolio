@@ -2,62 +2,63 @@ export const portfolioData = {
   personal: {
     name: "Vansh Kumar Kesarwani",
     shortName: "Vansh",
-    title: "MERN Stack Developer & Full Stack Engineer",
+    title: "MERN Stack Developer | React.js | Node.js | Express.js | MongoDB",
     subtitles: [
       "MERN Stack Developer",
-      "Full Stack Web Engineer",
-      "MCA (AI/ML) Scholar",
-      "Production-Grade Product Builder"
+      "Full Stack Web Developer",
+      "React.js & Node.js Specialist",
+      "MCA (AI/ML) Scholar"
     ],
     status: {
       availability: "Immediate Joiner",
       relocation: "Open to Relocate",
-      location: "Pratapgarh, UP, India",
-      targetRole: "MERN Stack Internship / Entry-Level Full Stack Developer"
+      location: "Pratapgarh, Uttar Pradesh, India",
+      targetRole: "MERN Stack Developer Internship / Entry-Level Full Stack Developer"
     },
     contact: {
       email: "vanshkesarwanivk02@gmail.com",
-      phone: "+91 8756433837",
+      phone: "+91-8756433837",
       phoneRaw: "+918756433837",
       github: "https://github.com/vanshkesarwani",
       linkedin: "https://www.linkedin.com/in/vansh-kumar-kesarwani",
-      portfolio: "https://vanshkesarwani.dev"
+      portfolio: "https://vanshkesarwani.dev",
+      resumePdf: "/resume.pdf"
     },
-    bio: "BCA graduate & MCA (AI/ML) student with hands-on MERN Stack experience through 2 internships and 2 production-grade applications. Proficient in React.js, Node.js, Express.js, MongoDB, RESTful APIs, JWT authentication, and high-performance UI engineering. Passionate about building seamless, scalable, and visually compelling web experiences for the modern web.",
+    bio: "BCA graduate and MCA (Artificial Intelligence & Machine Learning) student with hands-on MERN Stack (MongoDB, Express.js, React.js, Node.js) development experience through a full-stack internship and 2 production-grade full-stack projects. Proficient in React.js, Node.js, Express.js, MongoDB, REST API development, JWT and Passport.js authentication, CRUD operations, Git/GitHub version control, and responsive UI development. Immediate joiner seeking MERN Stack Developer Internship or Entry-Level Full Stack Developer role.",
     stats: [
-      { label: "Internships", value: "2", suffix: " Completed" },
-      { label: "Production Projects", value: "2", suffix: " Shipped" },
-      { label: "MCA CGPA", value: "9.00", suffix: " / 10" },
+      { label: "Internship", value: "1", suffix: " Full Stack (Vastora Tech)" },
+      { label: "Production Projects", value: "2", suffix: " Live Deployed" },
+      { label: "MCA CGPA", value: "8.82", suffix: " / 10" },
       { label: "BCA CGPA", value: "8.61", suffix: " / 10" }
     ],
     aboutDetails: {
       pillars: [
         {
-          title: "Clean Architecture & Modularity",
-          desc: "Strict separation of concerns, RESTful MVC structure, and reusable React component paradigms for high maintainability."
+          title: "Clean Architecture & REST APIs",
+          desc: "Strict separation of concerns, RESTful MVC structure, CRUD operations, and reusable React component paradigms for high maintainability."
         },
         {
-          title: "Performance & Responsive Polish",
-          desc: "Sub-second load times, 60fps micro-animations, mobile-first layouts, and accessible UI designed for Gen-Z and enterprise appeal."
+          title: "Authentication & Security",
+          desc: "Implementing secure authentication mechanisms using JWT and Passport.js session-based authorization with role-based access control (RBAC)."
         },
         {
           title: "AI & Modern Systems Vision",
-          desc: "Specializing in AI/ML through MCA to synthesize modern full-stack web engineering with intelligent algorithmic capabilities."
+          desc: "Specializing in AI & Machine Learning through MCA to blend modern full-stack engineering with intelligent algorithmic capabilities."
         },
         {
-          title: "Production & Team Experience",
-          desc: "Hands-on experience shipping features in agile sprints, participating in code reviews, and managing Git/GitHub team workflows."
+          title: "Industry Development Workflows",
+          desc: "Professional experience building full-stack applications in onsite environments, following clean coding practices, API testing, debugging, and Git/GitHub version control."
         }
       ],
       quickFacts: [
-        { label: "Target Role", val: "MERN Stack Developer / Full Stack Engineer" },
+        { label: "Target Role", val: "MERN Stack Developer / Entry-Level Full Stack Developer" },
         { label: "Availability", val: "Immediate Joiner (0 Days Notice)" },
-        { label: "Work Preference", val: "Open to Relocate / Remote / Hybrid" },
-        { label: "Current Education", val: "MCA in AI/ML — Amity Online (9.00 CGPA)" },
-        { label: "Undergrad Degree", val: "BCA — Amity University (8.61 CGPA)" },
-        { label: "Core Stack", val: "React 19, JavaScript ES6+, Node.js, Express, MongoDB" },
-        { label: "Databases & Auth", val: "MongoDB (Mongoose), SQL, JWT, Passport.js" },
-        { label: "Experience", val: "2 Internships (CodeAlpha, Craft Lab)" }
+        { label: "Location", val: "Pratapgarh, Uttar Pradesh, India" },
+        { label: "Work Preference", val: "Open to Relocate / Onsite / Hybrid / Remote" },
+        { label: "Current Education", val: "MCA in AI & ML — Amity University Online (8.82 CGPA)" },
+        { label: "Undergrad Degree", val: "BCA — Amity University, Lucknow (8.61 CGPA)" },
+        { label: "Internship", val: "Full Stack Developer Intern — Vastora Tech Pvt. Ltd." },
+        { label: "Live Deployed Projects", val: "Velura (E-Commerce) & Wanderlust (Rental)" }
       ]
     }
   },
@@ -69,115 +70,131 @@ export const portfolioData = {
       { id: "backend", name: "Backend & Auth" },
       { id: "database", name: "Database" },
       { id: "languages", name: "Languages" },
-      { id: "tools", name: "Tools & Concepts" }
+      { id: "tools", name: "Tools & Platforms" }
     ],
     list: [
+      // Frontend
       { name: "React.js", category: "frontend", level: "Advanced", icon: "react", highlighted: true },
+      { name: "Vite", category: "frontend", level: "Advanced", icon: "zap", highlighted: true },
+      { name: "Tailwind CSS", category: "frontend", level: "Advanced", icon: "palette", highlighted: true },
       { name: "JavaScript (ES6+)", category: "languages", level: "Advanced", icon: "javascript", highlighted: true },
+      { name: "HTML5", category: "frontend", level: "Advanced", icon: "code" },
+      { name: "CSS3", category: "frontend", level: "Advanced", icon: "palette" },
+      { name: "Responsive Web Design", category: "frontend", level: "Advanced", icon: "layout", highlighted: true },
+
+      // Backend
       { name: "Node.js", category: "backend", level: "Advanced", icon: "node", highlighted: true },
       { name: "Express.js", category: "backend", level: "Advanced", icon: "express", highlighted: true },
-      { name: "MongoDB & Mongoose", category: "database", level: "Advanced", icon: "mongodb", highlighted: true },
-      { name: "REST APIs", category: "backend", level: "Advanced", icon: "api", highlighted: true },
+      { name: "REST API", category: "backend", level: "Advanced", icon: "api", highlighted: true },
       { name: "JWT Authentication", category: "backend", level: "Advanced", icon: "shield", highlighted: true },
-      { name: "HTML5 & CSS3", category: "frontend", level: "Advanced", icon: "palette" },
-      { name: "Responsive UI/UX", category: "frontend", level: "Advanced", icon: "layout" },
-      { name: "Java", category: "languages", level: "Intermediate", icon: "coffee" },
+      { name: "Passport.js", category: "backend", level: "Advanced", icon: "lock", highlighted: true },
+      { name: "CRUD Operations", category: "backend", level: "Advanced", icon: "refresh", highlighted: true },
+
+      // Database
+      { name: "MongoDB", category: "database", level: "Advanced", icon: "mongodb", highlighted: true },
+      { name: "Mongoose", category: "database", level: "Advanced", icon: "database", highlighted: true },
       { name: "SQL", category: "database", level: "Intermediate", icon: "database" },
-      { name: "Git & GitHub", category: "tools", level: "Advanced", icon: "git" },
+
+      // Programming Languages
+      { name: "Java", category: "languages", level: "Intermediate", icon: "coffee" },
+
+      // Tools & Platforms
+      { name: "Git", category: "tools", level: "Advanced", icon: "git", highlighted: true },
+      { name: "GitHub", category: "tools", level: "Advanced", icon: "git", highlighted: true },
       { name: "Postman", category: "tools", level: "Advanced", icon: "send" },
       { name: "VS Code", category: "tools", level: "Advanced", icon: "code" },
-      { name: "MVC Architecture", category: "tools", level: "Advanced", icon: "layers" },
-      { name: "CRUD Operations", category: "tools", level: "Advanced", icon: "refresh" },
-      { name: "SDLC Best Practices", category: "tools", level: "Advanced", icon: "check-circle" }
+      { name: "Cloudinary", category: "tools", level: "Advanced", icon: "cloud", highlighted: true },
+      { name: "Mapbox", category: "tools", level: "Advanced", icon: "map", highlighted: true },
+      { name: "Vercel", category: "tools", level: "Advanced", icon: "upload-cloud", highlighted: true }
     ]
   },
 
   projects: [
     {
-      id: "footwear-ecommerce",
-      title: "Footwear E-Commerce Platform",
-      year: "2024",
-      badge: "Full Stack MERN",
-      tagline: "Dynamic, scalable footwear shopping experience with end-to-end authentication and optimized queries.",
-      stack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Auth", "Mongoose"],
-      description: "A production-grade full-stack e-commerce application engineered for speed, secure authentication, and seamless inventory management.",
+      id: "velura-ecommerce",
+      title: "Velura – Luxury E-Commerce Platform",
+      year: "2025",
+      badge: "Full Stack MERN • Deployed",
+      status: "Live on Vercel",
+      tagline: "Luxury e-commerce experience with RBAC admin dashboard, coupon engine, dynamic cart/wishlist & Cloudinary media.",
+      stack: ["React.js", "Vite", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT Auth", "Cloudinary"],
+      description: "A production-grade full-stack e-commerce web application engineered with modern React & Tailwind UI, secure JWT authentication, dynamic product catalog management, and role-based access control.",
       highlights: [
-        "Built full-stack e-commerce application with JWT-based authentication (Login, Signup, Logout, session protection).",
-        "Developed dynamic CRUD product management enabling real-time inventory updates and filtered search.",
-        "Designed reusable, responsive React components for catalog showcase, shopping cart state management, and checkout flows.",
-        "Implemented structured Mongoose schemas with indexed querying for optimized database performance."
+        "Built a full-stack e-commerce web application enabling product browsing, search and filtering, cart and wishlist management, coupon application, order placement, and order tracking.",
+        "Developed an admin dashboard with role-based access control (RBAC) for managing products, banners, users, and orders separately from standard user permissions.",
+        "Implemented JWT-based authentication for secure login and Cloudinary integration for product image storage; architected React → Express.js → MongoDB request-response flow."
       ],
-      demoUrl: "https://github.com/vanshkesarwani/portfolio",
-      githubUrl: "https://github.com/vanshkesarwani/portfolio",
-      gradient: "from-purple to-cyan"
+      features: [
+        { label: "Admin RBAC", desc: "Role-based access control for inventory & banner management" },
+        { label: "Cart & Wishlist", desc: "Real-time state with dynamic coupon discounts & order tracking" },
+        { label: "Cloudinary CDN", desc: "Optimized image transformations and fast media delivery" }
+      ],
+      demoUrl: "https://e-commerce-five-xi-63.vercel.app/",
+      deployedUrl: "https://e-commerce-five-xi-63.vercel.app/",
+      githubUrl: "https://github.com/vanshkesarwani/e-commerce",
+      gradient: "from-purple to-cyan",
+      accentColor: "#8b5cf6"
     },
     {
-      id: "wanderlust-airbnb",
-      title: "Wanderlust – Airbnb Clone",
+      id: "wanderlust-rental",
+      title: "Wanderlust – Vacation Rental Platform",
       year: "2024",
-      badge: "Full Stack Web & Geo Maps",
-      tagline: "Immersive vacation stay booking platform featuring interactive Mapbox geolocation and cloud media.",
-      stack: ["Node.js", "Express.js", "MongoDB", "EJS", "Cloudinary", "Mapbox GL JS", "Passport.js"],
-      description: "A comprehensive property listing and rental platform with location-based discovery and robust user authentication.",
+      badge: "Full Stack Web & Geo Maps • Deployed",
+      status: "Live on Vercel",
+      tagline: "Vacation rental marketplace featuring interactive Mapbox geolocation, Cloudinary CDN, and session auth.",
+      stack: ["React.js", "Vite", "Node.js", "Express.js", "MongoDB", "Mongoose", "Passport.js", "Cloudinary", "Mapbox"],
+      description: "A full-featured vacation rental web application allowing users to search and filter listings, view property locations on dynamic maps, and allowing registered hosts to manage their own properties.",
       highlights: [
-        "Developed a full-featured property listing platform with Passport.js authentication and role-based permissions.",
-        "Engineered complete CRUD listing operations following industry-standard RESTful MVC routing architecture.",
-        "Integrated Cloudinary cloud storage API for secure image upload, transformation, and fast CDN delivery.",
-        "Integrated Mapbox GL JS for interactive property geo-location maps with custom coordinate markers."
+        "Built a full-stack vacation rental web application allowing users to search and filter properties, view detailed listings, and enabling registered hosts to list and manage their own properties.",
+        "Implemented Passport.js session-based authentication and authorization, ensuring only property owners can edit or delete their listings and reviews.",
+        "Integrated Mapbox geocoding API to convert host-entered addresses into geographic coordinates for interactive map display; used Cloudinary for image upload and storage."
       ],
-      demoUrl: "https://github.com/vanshkesarwani",
-      githubUrl: "https://github.com/vanshkesarwani",
-      gradient: "from-cyan to-emerald"
+      features: [
+        { label: "Mapbox Geocoding", desc: "Converts text addresses into coordinates for interactive map pins" },
+        { label: "Passport.js Auth", desc: "Session-based authorization with owner-only editing & reviews" },
+        { label: "Host Listing Hub", desc: "Complete property hosting CRUD pipeline with media uploads" }
+      ],
+      demoUrl: "https://wanderlust-six-vert.vercel.app/",
+      deployedUrl: "https://wanderlust-six-vert.vercel.app/",
+      githubUrl: "https://github.com/vanshkesarwani/wanderlust",
+      gradient: "from-cyan to-emerald",
+      accentColor: "#06b6d4"
     }
   ],
 
   experience: [
     {
-      role: "Web Developer Intern",
-      company: "CodeAlpha",
-      location: "Lucknow, India (Remote)",
-      period: "Jul 2024 – Sep 2024",
-      type: "Internship",
-      highlights: [
-        "Built responsive, accessible web pages using HTML5, CSS3, and JavaScript ES6+ with a strict mobile-first design approach.",
-        "Ensured cross-device compatibility, optimal rendering performance, and high Lighthouse audits across modern browsers.",
-        "Translated Figma and UI/UX mockups into pixel-perfect, functional web components and delivered features on schedule in an agile team."
-      ],
-      skillsUsed: ["HTML5", "CSS3", "JavaScript ES6+", "Responsive Design", "Cross-Browser Testing"]
-    },
-    {
       role: "Full Stack Developer Intern",
-      company: "Craft Lab",
-      location: "Mumbai, India (Remote)",
-      period: "May 2024 – Jun 2024",
-      type: "Internship",
+      company: "Vastora Tech Pvt. Ltd.",
+      location: "Noida, India (Onsite)",
+      period: "September 2026 – Present",
+      type: "Internship (Onsite)",
       highlights: [
-        "Collaborated directly with senior developers to diagnose, debug, and resolve front-end and back-end coding issues.",
-        "Maintained Git/GitHub version control workflows, branching conventions, and pull request reviews in a team-based environment.",
-        "Participated actively in agile sprints, daily standups, and rigorous code reviews to enforce software engineering best practices."
+        "Built full-stack web applications using React.js, Node.js, Express.js, and MongoDB, implementing REST APIs and CRUD operations.",
+        "Worked on user authentication, API testing, debugging, database integration, and Git/GitHub version control following clean coding practices and industry-standard development workflows."
       ],
-      skillsUsed: ["JavaScript", "Git", "GitHub", "Code Review", "Agile Collaboration"]
+      skillsUsed: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "CRUD Operations", "Git/GitHub", "API Testing"]
     }
   ],
 
   education: [
     {
-      degree: "MCA – AI/ML",
+      degree: "Master of Computer Applications (MCA) – Artificial Intelligence & Machine Learning",
       institution: "Amity University Online",
-      location: "Noida, UP",
+      location: "Online",
       period: "2025 – 2027",
-      score: "CGPA: 9.00 / 10",
+      score: "CGPA: 8.82",
       status: "Currently Pursuing",
-      description: "Specializing in Artificial Intelligence and Machine Learning along with advanced computer science and software systems."
+      description: "Specializing in Artificial Intelligence and Machine Learning alongside advanced software systems, database engineering, and modern web application development."
     },
     {
-      degree: "BCA – Computer Applications",
+      degree: "Bachelor of Computer Applications (BCA)",
       institution: "Amity University",
-      location: "Lucknow, UP",
+      location: "Lucknow, Uttar Pradesh",
       period: "2022 – 2025",
-      score: "CGPA: 8.61 / 10",
+      score: "CGPA: 8.61",
       status: "Graduated",
-      description: "Solid foundation in core computer science, software engineering, databases, object-oriented programming, and web development."
+      description: "Rigorous foundation in computer science principles, object-oriented programming, data structures & algorithms, web engineering, and database systems."
     }
   ],
 
@@ -186,13 +203,13 @@ export const portfolioData = {
       title: "Full Stack Web Development",
       provider: "Apna College",
       badge: "MERN Stack Mastery",
-      topics: "React.js, Node.js, Express.js, MongoDB, REST APIs, Git"
+      topics: "React.js, Node.js, Express.js, MongoDB, REST APIs, CRUD, Git/GitHub"
     },
     {
       title: "Data Structures & Algorithms in Java",
       provider: "Apna College",
       badge: "Core Problem Solving",
-      topics: "Arrays, Linked Lists, Trees, Graphs, Recursion, Time Complexity"
+      topics: "Arrays, Linked Lists, Trees, Graphs, Recursion, Time & Space Complexity"
     }
   ]
 };

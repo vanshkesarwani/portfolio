@@ -24,7 +24,7 @@ export default function Experience() {
             Internship <span className="gradient-text">Experience</span>
           </h2>
           <p className="section-description">
-            Hands-on professional engineering experience working in agile, collaborative remote teams.
+            Hands-on professional engineering experience working in onsite, agile development environments building production full-stack systems.
           </p>
         </div>
 
